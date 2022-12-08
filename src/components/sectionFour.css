@@ -1,0 +1,463 @@
+:root {
+  --white: aliceblue;
+}
+
+@font-face {
+  font-family: PyriformTonesNF;
+  src: url("/public/SangeetLunchPage/PyriformTonesNF.ttf");
+}
+
+@font-face {
+  font-family: AlbemarleSwash;
+  src: url("/public/SangeetLunchPage/AlbemarleSwash.ttf");
+}
+@font-face {
+  font-family: Reikna;
+  src: url("/public/SangeetLunchPage/Reikna.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.sangeetLunch--wrap {
+  height: 201vh;
+  z-index: 800;
+}
+
+.sangeetLunch {
+  height: 100vh;
+  width: 100vw;
+  max-width: 900px;
+  position: sticky;
+  top: 0;
+  background-image: url("/public/SangeetLunchPage/main--bg.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+
+.sangeetLunch--bottom--deco--container {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 35%;
+}
+
+.sangeetLunch--bottom--deco {
+  position: absolute;
+  width: 100%;
+  height: 29.5%;
+  bottom: 0;
+  margin-bottom: -10%;
+  scale: 1.4;
+  z-index: 100;
+
+  background-image: url("/public/SangeetLunchPage/bottom-deco.png");
+  background-position: center 1%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.sangeetLunch--upper--deco {
+  width: 100%;
+  z-index: 250;
+  background-image: url("/public/SangeetLunchPage/lantens.png");
+  background-position: center 90%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 31.5vh;
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+.sangeetLunch--text--container {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 85%;
+  position: relative;
+  overflow: hidden;
+  z-index: 200;
+  text-align: center;
+  padding-left: 5%;
+  padding-right: 5%;
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+}
+
+.sangeetLunch--topic {
+  color: #ffdcb4;
+  font-family: AlbemarleSwash;
+  font-size: clamp(0.72rem, 70% + 2rem, 3rem);
+  opacity: 0.9;
+  line-height: 170%;
+  padding-bottom: 5%;
+}
+
+.sangeetLunch--subtopic {
+  color: #ffdcb4;
+  font-size: clamp(0.72rem, 10% + 1.6rem, 2.2rem);
+}
+
+.sangeetLunch--date {
+  color: #f0d001;
+  font-size: clamp(0.72rem, 20% + 1.5rem, 2rem);
+}
+
+.sangeetLunch--para {
+  color: var(--white);
+  font-family: Reikna;
+  font-size: clamp(0.72rem, 10% + 1.7rem, 2rem);
+  letter-spacing: 1px;
+  font-weight: 550;
+  line-height: 90%;
+}
+
+.sangeetLunch--Time {
+  color: #3f3021;
+  font-size: clamp(0.72rem, 17% + 1.2rem, 2rem);
+}
+
+.sangeetLunch--venue {
+  color: #3f3021;
+  font-family: Reikna;
+  font-size: clamp(0.72rem, 10% + 1.5rem, 2rem);
+}
+
+.sangeetLunch--attire {
+  color: #902c01;
+  font-family: Reikna;
+  font-size: clamp(0.72rem, 90% + 1rem, 2.2rem);
+}
+
+.sangeetLunch--attire--container {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  max-width: 900px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.sangeetLunch--attire--arrowL,
+.sangeetLunch--attire--arrowR {
+  width: 20%;
+  height: 50%;
+}
+
+.sangeetLunch--venue--numbers {
+  font-size: clamp(0.72rem, 10% + 0.8rem, 2rem);
+  font-weight: 900;
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+.sangeetLunch--poem--container {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  overflow: hidden;
+}
+
+.sangeetLunch--poem {
+  width: 100%;
+  height: 68vh;
+  object-position: center 90%;
+  object-fit: cover;
+  transform: scaleY(1.2);
+}
+
+.sangeetLunch--doors--container {
+  grid-area: 1 / 1 / 2 / 2;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 400;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.sangeetLunch--doorL {
+  width: 50%;
+  height: 100%;
+  background-image: url("/public/SangeetLunchPage/doorL.png");
+  background-repeat: no-repeat;
+  background-position: 90% center;
+  background-size: cover;
+  transform-origin: left;
+  transform-style: preserve-3d;
+  z-index: 410;
+}
+
+.sangeetLunch--doorR {
+  width: 50%;
+  height: 100%;
+  background-image: url("/public/SangeetLunchPage/doorR.png");
+  background-repeat: no-repeat;
+  background-position: 10% center;
+  background-size: cover;
+  transform-origin: right;
+  transform-style: preserve-3d;
+  z-index: 410;
+}
+
+/* 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+@media screen and (max-height: 759px) {
+  .sangeetLunch--topic {
+    font-size: clamp(0.72rem, 70% + 1.6rem, 2.5rem);
+    opacity: 0.9;
+    line-height: 170%;
+    padding-bottom: 6%;
+  }
+
+  .sangeetLunch--subtopic {
+    font-size: clamp(0.72rem, 30% + 1.1rem, 2rem);
+  }
+
+  .sangeetLunch--date {
+    font-size: clamp(0.72rem, 10% + 1.3rem, 1.8rem);
+  }
+
+  .sangeetLunch--para {
+    font-size: clamp(0.72rem, 30% + 1.2rem, 2.4rem);
+    letter-spacing: 0.5px;
+  }
+
+  .sangeetLunch--Time {
+    font-size: clamp(0.72rem, 20% + 1.2rem, 1.8rem);
+  }
+
+  .sangeetLunch--venue {
+    font-size: clamp(0.72rem, 10% + 1.4rem, 2rem);
+  }
+
+  .sangeetLunch--attire {
+    font-size: clamp(0.72rem, 60% + 1rem, 2.2rem);
+  }
+
+  .sangeetLunch--attire--container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 900px;
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .sangeetLunch--attire--arrowL,
+  .sangeetLunch--attire--arrowR {
+    width: 20%;
+    height: 50%;
+  }
+
+  .sangeetLunch--upper--deco {
+    height: 37vh;
+  }
+}
+
+@media screen and (max-height: 610px) {
+  .sangeetLunch--topic {
+    font-size: clamp(0.72rem, 40% + 1.6rem, 2.2rem);
+    opacity: 0.9;
+    line-height: 170%;
+    padding-bottom: 3%;
+  }
+
+  .sangeetLunch--date {
+    font-size: clamp(0.72rem, 10% + 1rem, 1.2rem);
+  }
+
+  .sangeetLunch--subtopic {
+    font-size: clamp(0.72rem, 30% + 0.8rem, 1.6rem);
+  }
+
+  .sangeetLunch--para {
+    font-size: clamp(0.72rem, 70% + 0.7rem, 2rem);
+    letter-spacing: 0.5px;
+  }
+
+  .sangeetLunch--Time {
+    font-size: clamp(0.72rem, 20% + 0.8rem, 1.4rem);
+  }
+
+  .sangeetLunch--venue {
+    font-size: clamp(0.72rem, 10% + 1.2rem, 1.4rem);
+  }
+
+  .sangeetLunch--attire {
+    font-size: clamp(0.72rem, 60% + 0.8rem, 1.7rem);
+  }
+
+  .sangeetLunch--attire--container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 900px;
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+
+  .sangeetLunch--attire--arrowL,
+  .sangeetLunch--attire--arrowR {
+    width: 20%;
+    height: 50%;
+  }
+}
+
+/* 
+
+
+
+
+*/
+
+@media screen and (min-width: 500px) {
+  .sangeetLunch--topic {
+    font-size: clamp(0.72rem, 70% + 3rem, 4.5rem);
+    opacity: 0.9;
+    line-height: 170%;
+    padding-bottom: 6%;
+  }
+
+  .sangeetLunch--subtopic {
+    font-size: clamp(0.72rem, 30% + 1.8rem, 3rem);
+  }
+
+  .sangeetLunch--date {
+    font-size: clamp(0.72rem, 10% + 2rem, 2.5rem);
+  }
+
+  .sangeetLunch--para {
+    font-size: clamp(0.72rem, 30% + 2rem, 3rem);
+    letter-spacing: 0.5px;
+  }
+
+  .sangeetLunch--Time {
+    font-size: clamp(0.72rem, 20% + 1.7rem, 2.1rem);
+  }
+
+  .sangeetLunch--venue {
+    font-size: clamp(0.72rem, 10% + 1.8rem, 2.6rem);
+    padding-bottom: 2vh;
+  }
+
+  .sangeetLunch--attire {
+    font-size: clamp(0.72rem, 60% + 1.5rem, 2.8rem);
+  }
+
+  .sangeetLunch--attire--container {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    max-width: 900px;
+    gap: 2%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding-bottom: 5vh;
+  }
+
+  .sangeetLunch--attire--arrowL,
+  .sangeetLunch--attire--arrowR {
+    width: 30%;
+    height: 50%;
+  }
+
+  .sangeetLunch--upper--deco {
+    height: 37vh;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .sangeetLunch--upper--deco {
+    width: 100%;
+    z-index: 250;
+    background-image: url("/public/SangeetLunchPage/lantens.png");
+    background-position: center 99%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 38.5vh;
+  }
+}

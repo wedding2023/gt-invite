@@ -1,0 +1,134 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.sangeet--wrap {
+  width: 100vw;
+  max-width: 900px;
+  height: 250vh;
+}
+
+.sangeet {
+  place-items: center;
+  height: 100vh;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+/* 
+
+
+
+
+
+
+
+
+
+
+*/
+.sangeet--outer--container {
+  grid-area: 1 / 1 / 2 / 2;
+  display: grid;
+  width: 100vw;
+  max-width: 900px;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 900;
+  background-color: #20002f;
+  justify-items: center;
+  justify-content: center;
+}
+
+.gala--faiyLights {
+  width: 100vw;
+  max-width: 900px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+}
+
+.gala--stage--container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  place-items: center;
+}
+
+.gala--stage {
+  background-image: url("/public/GalaPage/stage.webp");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 120vw;
+  height: 100%;
+  transform-origin: center 52%;
+  z-index: 450;
+  display: block;
+  grid-area: 1 / 1 / 2 / 2;
+}
+
+.gala--couple {
+  width: 20vw;
+  display: block;
+  transform-origin: center;
+  z-index: 500;
+  grid-area: 1 / 1 / 2 / 2;
+}
+/* 
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+@media screen and (min-width: 850px) {
+  .sangeet--inner--container {
+    max-width: 900px;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 500px) {
+  .gala--faiyLights {
+    height: 20vh;
+    object-position: center 90%;
+  }
+
+  .gala--stage--container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    place-items: center;
+  }
+
+  .gala--stage {
+    width: 70vw;
+    transform-origin: center 52%;
+  }
+
+  .gala--couple {
+    width: 10vw;
+    display: block;
+    transform-origin: center;
+    z-index: 500;
+  }
+}
